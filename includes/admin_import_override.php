@@ -577,7 +577,7 @@ function tsml_import_page()
 										<th class="align-left col-md-2"><?php _e('Parent Region', '12-step-meeting-list')?></th>
 										<th class="align-left col-md-2"><?php _e('Change Detection', '12-step-meeting-list')?></th>
 										<th class="align-center col-md-1"><?php _e('Meetings', '12-step-meeting-list')?></th>
-										<th class="align-center col-md-2"><?php _e('Last Update', '12-step-meeting-list')?></th>
+										<th class="align-center col-md-2"><?php _e('Last Refresh', '12-step-meeting-list')?></th>
 									</tr>
 								</thead>
 								<tbody>
