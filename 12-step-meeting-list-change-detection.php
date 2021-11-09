@@ -3,12 +3,12 @@
 Plugin Name: 12 Step Meeting List Change Detection
 Plugin URI: https://wordpress.org/plugins/12-step-meeting-list-change-detection/
 Description: This '12 Step Meeting List' plugin add-on augments the existing data import utility by sensing data changes in enabled data source feeds and generating email notifications for Change Notification Email receipients registered on the Import & Settings page. 
-Version: 3.12
+Version: 1.0.0
 Requires PHP: 5.6
 Author: Code4Recovery
 Author URI: https://github.com/code4recovery/12-step-meeting-list-change-detection
 Text Domain: 12-step-meeting-list-change-detection
-Updated: September 6, 2021
+Updated: November 9, 2021
  */
 
  //define constants
@@ -17,7 +17,7 @@ if (!defined('TSMLCD_CONTACT_EMAIL')) {
 }
 
 if (!defined('TSMLCD_VERSION')) {
-    define('TSMLCD_VERSION', '3.12');
+    define('TSMLCD_VERSION', '1.0.0');
 }
 
 if (!defined('TSMLCD_PLUGIN_DIR')) {
@@ -32,9 +32,6 @@ if (!defined('TSMLCD_PLUGIN_INCLUDES_DIR')) {
 include TSMLCD_PLUGIN_INCLUDES_DIR . 'admin_import_override.php';
 //include TSMLCD_PLUGIN_INCLUDES_DIR . 'functions.php';
 
-//these hooks need to be in this file
-//register_activation_hook(__FILE__, 'TSML_change_activation_state');
-//register_deactivation_hook(__FILE__, 'TSML_change_activation_state');
 
 /* ******************** start of data_source_change_detection ****************** */
 //called by register_activation_hook in admin_import
@@ -112,7 +109,7 @@ if (!function_exists('tsml_scan_data_source')) {
 					$message .= " database count: $data_source_count_meetings <br>";
 					$feedCount = count($meetings);
 					$message .= "import feed cnt: $feedCount<br>";
-					$message .= 'Last Refresh: ' . tsml_date_localised("l F j, Y  h:i a", $data_source_last_import) . '<br>';
+					$message .= 'Last Refresh: ' . Date("l F j, Y  h:i a", $data_source_last_import) . '<br>';
 					if ($meetings_updated) { 
 						$message .= "<br><b><u>Detected Difference</b></u><br>";
 						foreach ($meetings_updated as $updated_group) {

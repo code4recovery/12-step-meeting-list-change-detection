@@ -630,7 +630,7 @@ function tsml_import_page()
 										<td class="align-center count_meetings col-md-2"><?php echo number_format($properties['count_meetings'])?></td>
 
 										<td class="align-right col-md-2">
-											<?php echo tsml_date_localised(get_option('date_format') . ' ' . get_option('time_format'), $properties['last_import'])?>
+											<?php echo Date(get_option('date_format') . ' ' . get_option('time_format'), $properties['last_import'])?>
 										</td>
 
 										<td class="small col-md-2">
