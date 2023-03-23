@@ -9,4 +9,4 @@ Re-registering an existing data source is necessary if Change Detection is desir
 	4. Pressing the "Add Data Source" button will register a WordPress Cron Job (tsml_scan_data_source) for the newly added and enabled data source. By default, this cron job is scheduled to run "Once Daily" starting at midnight (12:00 AM). The frequency and scheduled time that the cron job runs is completely configurable by you if the "WP Crontrol" plugin has been installed.
 
 ## Dev Note
-This "develop" version plugin currently only works when used with the GitHub code4recovery "develop" branch code of the 12 Step Meeting List plugin.
+The functionality of this "develop" version plugin is now a core feature of the 12 Step Meeting List having been merged into version 3.13.
